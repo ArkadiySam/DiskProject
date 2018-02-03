@@ -14,12 +14,8 @@ public class User implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private long id;
-    @Column(name = "age")
-    private int age;
-    @Column(name = "firstname",length = 20)
-    private String firstname;
-    @Column(name = "lastname",length = 20)
-    private String lastname;
+    @Column(name = "login")
+    private String login;
 
     @OneToMany(mappedBy = "user")
     private Set<Disk>disks;
@@ -39,22 +35,6 @@ public class User implements Serializable{
 
     }
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
     public long getId() {
         return id;
     }
@@ -63,16 +43,16 @@ public class User implements Serializable{
         this.id = id;
     }
 
-    public int getAge() {
-        return age;
+    public String getLogin() {
+        return login;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     @Override
     public String toString() {
-        return getId()+" - "+getFirstname()+" - "+getLastname()+" - "+getAge();
+        return getId()+" - "+getLogin()+"\n";
     }
 }

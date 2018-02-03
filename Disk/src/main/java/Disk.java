@@ -12,6 +12,7 @@ public class Disk {
     private long id;
     @Column(name = "title")
     private String Title;
+
     @ManyToOne
     @JoinColumn(name="user_id")
     private User user;
@@ -42,6 +43,6 @@ public class Disk {
 
     @Override
     public String toString() {
-        return getId()+" - "+getTitle()+" - "+getUser().getId();
+        return getId()+" - "+getTitle()+" - "+getUser().getId()+"\n";
     }
 }

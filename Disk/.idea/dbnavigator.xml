@@ -23,11 +23,15 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="26ed2842-064f-4660-afe5-aae7d93b2fcc">
+        <schema name="test" object-types="column, function, table, view" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="26ed2842-064f-4660-afe5-aae7d93b2fcc">
-      <console name="Connection 1" type="STANDARD"><![CDATA[select * from `user`]]></console>
+      <console name="Connection 1" type="STANDARD"><![CDATA[select *from `user`]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
